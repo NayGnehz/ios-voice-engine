@@ -1,26 +1,18 @@
 {
-  "sequence": 3,
-  "id": "bet3-fix2",
-  "title": "修复二：匹配定点 BET3 模块",
+  "sequence": 4,
+  "id": "compressed",
+  "title": "压缩安装包且保留资源 FD 访问",
   "status": "retained-source",
   "reconstructed_on": "2026-11-14",
-  "note": "修正音色头中的 select/synth 组件声明，语音模型本身不变。未重新执行旧构建。",
+  "note": "原生库 ZIP 压缩；XMF 保持可直接读取的存储方式。版本号与修复二相同，以序号区分。",
   "artifacts": [
     {
-      "filename": "ios-tingting-arm64-fix2.apk",
-      "bytes": 15689807,
-      "sha256": "3531157e19f971d0f018abe4ab5018ef3ed5bfda54d67b787e757737d669e11f",
+      "filename": "iOS-婷婷_64位.apk",
+      "bytes": 11159609,
+      "sha256": "43b9fbf7c36d0628f4a78577817ec289d3e6d5dd126a2835954db44337f73f1e",
       "name": "12",
       "versionCode": "4",
       "versionName": "1.0"
-    },
-    {
-      "filename": "tingting-diagnostic-fix2.apk",
-      "bytes": 15652081,
-      "sha256": "1922c22a3581e06a313a8de1c39a58cb07c32e4a3c33d62cfa35994a70fd5748",
-      "name": "17",
-      "versionCode": "3",
-      "versionName": "1.2-bet3fxd"
     }
   ],
   "source_inventory": {
@@ -122,6 +114,12 @@
       "source": "elf_view.py",
       "source_sha256": "6cbeb246e602c78bf2f48e4bbfc5de508483de8c8b3e9ceb9dc33b55961cd5d6",
       "stored_sha256": "6cbeb246e602c78bf2f48e4bbfc5de508483de8c8b3e9ceb9dc33b55961cd5d6",
+      "transformations": []
+    },
+    "research/package_compressed.py": {
+      "source": "package_compressed.py",
+      "source_sha256": "8a8a2b53ad5a0d113ae72476ca0021aca0660cb722846a2148574ef470d360c7",
+      "stored_sha256": "8a8a2b53ad5a0d113ae72476ca0021aca0660cb722846a2148574ef470d360c7",
       "transformations": []
     },
     "research/patch_fd_close.py": {
