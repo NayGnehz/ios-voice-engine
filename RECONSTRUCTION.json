@@ -1,19 +1,26 @@
 {
-  "sequence": 0,
-  "id": "community-baseline",
-  "title": "社区原包基线记录",
-  "status": "artifact-metadata-only",
+  "sequence": 1,
+  "id": "arm64-trial",
+  "title": "ARM64 运行库替换试验",
+  "status": "retained-source",
   "reconstructed_on": "2026-11-14",
-  "note": "原社区封装没有可验证的开放源码；这里只记录实际输入 APK 身份，不伪造原项目源码。",
+  "note": "保留的试验构建脚本；这一阶段尚无后续重复 close、定点模块和就绪修复。",
   "artifacts": [
     {
-      "filename": "苹果中文语音库_clone.apk",
-      "bytes": 27990856,
-      "sha256": "3768e8f7f1c7cefc169cc5fbb5354dbd8a7cd8efdddfe4b45f8486e4d767946f",
+      "filename": "tingting-arm64-trial.apk",
+      "bytes": 34048501,
+      "sha256": "fcb93a7f5160edb9420e77243671cde473a2d90c0e08135620710fc975788358",
       "name": "12",
       "versionCode": "1",
       "versionName": "1.0"
     }
   ],
-  "source_inventory": {}
+  "source_inventory": {
+    "research/build_trial.py": {
+      "source": "build_trial.py",
+      "source_sha256": "5e48c9d8a69cc3a1f424454bb4187459c553a400064c957023e1db957cae798d",
+      "stored_sha256": "5e48c9d8a69cc3a1f424454bb4187459c553a400064c957023e1db957cae798d",
+      "transformations": []
+    }
+  }
 }
