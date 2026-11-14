@@ -1,25 +1,89 @@
 {
-  "sequence": 1,
-  "id": "arm64-trial",
-  "title": "ARM64 运行库替换试验",
+  "sequence": 2,
+  "id": "fd-close-fix1",
+  "title": "单音色无图标与重复 close 修复",
   "status": "retained-source",
   "reconstructed_on": "2026-11-14",
-  "note": "保留的试验构建脚本；这一阶段尚无后续重复 close、定点模块和就绪修复。",
+  "note": "现存修复一脚本将单音色、无图标和重复关闭修复组合在一起；更早未单独留存的代码不拆成猜测快照。签名密码参数已脱敏。",
   "artifacts": [
     {
-      "filename": "tingting-arm64-trial.apk",
-      "bytes": 34048501,
-      "sha256": "fcb93a7f5160edb9420e77243671cde473a2d90c0e08135620710fc975788358",
+      "filename": "ios-tingting-arm64-fix1.apk",
+      "bytes": 15689807,
+      "sha256": "2e989aa8963a67fdfa5ab34e01381e0d30416465eb94c9887e64755a32f65014",
       "name": "12",
-      "versionCode": "1",
+      "versionCode": "3",
       "versionName": "1.0"
+    },
+    {
+      "filename": "tingting-diagnostic-fix1.apk",
+      "bytes": 15652081,
+      "sha256": "332db6211ab7e90b0f8175fb669222b4d11468fcbaf7c48bf61a87aec9e99f81",
+      "name": "17",
+      "versionCode": "2",
+      "versionName": "1.1-fd-fix"
     }
   ],
   "source_inventory": {
+    "research/build_direct_voice.py": {
+      "source": "build_direct_voice.py",
+      "source_sha256": "f668c96ee3c3f408cf2bf96a2a53594fe57263de6e9670c8d6c732b7a091da55",
+      "stored_sha256": "f668c96ee3c3f408cf2bf96a2a53594fe57263de6e9670c8d6c732b7a091da55",
+      "transformations": []
+    },
+    "research/build_fix1.ps1": {
+      "source": "build_fix1.ps1",
+      "source_sha256": "9e47f158e615f4ac1431e97ca58ffc3bdc1e5dc742ca6b01843fbc73b5547103",
+      "stored_sha256": "34c18c048a0b9768c82a135f68a45abb9f7b5b3811dd5035dcfc97ddb7c3df37",
+      "transformations": [
+        "historical signing password literal replaced by environment-variable reference"
+      ]
+    },
     "research/build_trial.py": {
       "source": "build_trial.py",
       "source_sha256": "5e48c9d8a69cc3a1f424454bb4187459c553a400064c957023e1db957cae798d",
       "stored_sha256": "5e48c9d8a69cc3a1f424454bb4187459c553a400064c957023e1db957cae798d",
+      "transformations": []
+    },
+    "research/diagnostic/AndroidManifest.xml": {
+      "source": "diagnostic/AndroidManifest.xml",
+      "source_sha256": "f58323379f401bd1e46a10ee8b77b4f687aa463f2033c567a393dc8c93c03a85",
+      "stored_sha256": "f58323379f401bd1e46a10ee8b77b4f687aa463f2033c567a393dc8c93c03a85",
+      "transformations": []
+    },
+    "research/diagnostic/DiagnosticActivity.java": {
+      "source": "diagnostic/DiagnosticActivity.java",
+      "source_sha256": "788272e219837d2fa2fef6b62ccbd175420a85ab6964e95458d3d9b2ebd68771",
+      "stored_sha256": "788272e219837d2fa2fef6b62ccbd175420a85ab6964e95458d3d9b2ebd68771",
+      "transformations": []
+    },
+    "research/diagnostic/ExitTrace.java": {
+      "source": "diagnostic/ExitTrace.java",
+      "source_sha256": "32c80bdc815116f105e9a55d1c82229f9f0cc13c0c321a9e49f042468d63621d",
+      "stored_sha256": "32c80bdc815116f105e9a55d1c82229f9f0cc13c0c321a9e49f042468d63621d",
+      "transformations": []
+    },
+    "research/diagnostic/package_probe.py": {
+      "source": "diagnostic/package_probe.py",
+      "source_sha256": "22f789e380b78fc9bfef8ae3e8ec67736076c0546a30741a1af22115fa47a8f2",
+      "stored_sha256": "22f789e380b78fc9bfef8ae3e8ec67736076c0546a30741a1af22115fa47a8f2",
+      "transformations": []
+    },
+    "research/diagnostic/res/values/strings.xml": {
+      "source": "diagnostic/res/values/strings.xml",
+      "source_sha256": "c5ddcac562e91f6db451f3edb7be7e418f354299a46ffb6ee3c379fd4e884308",
+      "stored_sha256": "c5ddcac562e91f6db451f3edb7be7e418f354299a46ffb6ee3c379fd4e884308",
+      "transformations": []
+    },
+    "research/patch_fd_close.py": {
+      "source": "patch_fd_close.py",
+      "source_sha256": "777662048fb8df5233fbc90800a2376d89007296b316aeb1860e65c900c4cb1c",
+      "stored_sha256": "777662048fb8df5233fbc90800a2376d89007296b316aeb1860e65c900c4cb1c",
+      "transformations": []
+    },
+    "research/verify_fix1.py": {
+      "source": "verify_fix1.py",
+      "source_sha256": "ea47c4769ce5ae2203b88fa0674cc44f8f971b9a3b3c1ce44286396252dca9e2",
+      "stored_sha256": "ea47c4769ce5ae2203b88fa0674cc44f8f971b9a3b3c1ce44286396252dca9e2",
       "transformations": []
     }
   }
