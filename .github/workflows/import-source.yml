@@ -26,7 +26,7 @@ jobs:
           git bundle verify "$RUNNER_TEMP/source.bundle"
           git fetch "$RUNNER_TEMP/source.bundle" refs/heads/main
           git cherry-pick --no-commit FETCH_HEAD
-          git rm -- .github/workflows/import-source.yml
+          # Workflow files are pre-created through the connected GitHub account.
           git -c user.name=NayGnehz -c user.email= commit --author='NayGnehz <>' -m 'Publish iOS Voice Engine with five standalone ARM64 voices'
           python tools/test.py --jdk "$JAVA_HOME" --work "$RUNNER_TEMP/ios-voice-engine-tests"
           PYTHONPYCACHEPREFIX="$RUNNER_TEMP/pycache" python -m compileall -q tools
