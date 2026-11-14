@@ -1,26 +1,26 @@
 {
-  "sequence": 6,
-  "id": "ready-v2",
-  "title": "启动就绪 1.2 / 诊断 1.4",
-  "status": "retained-source",
+  "sequence": 7,
+  "id": "word-highlighting",
+  "title": "逐词位置回调 1.3 / 诊断 1.5",
+  "status": "documented-reconstruction",
   "reconstructed_on": "2026-11-14",
-  "note": "保留的 readiness 源码含就绪等待和进程独立日志；不导入用户诊断日志、设备身份或运行采样。",
+  "note": "词回调代码保留；倍速调用、版本标签、诊断说明和打包文件名按已记录的后续变更逆向还原。不是完整原始文件逐字备份，不声称重现同一个签名 APK；旧版 verify.py 未单独恢复。",
   "artifacts": [
     {
-      "filename": "iOS-婷婷_启动修复版_v2.apk",
+      "filename": "iOS-婷婷_逐词高亮版.apk",
       "bytes": 11134253,
-      "sha256": "e926b663435d28a59fb0277788dc02eb3521e1f0184c3e13da9ea83e036936d8",
+      "sha256": "0545c82a0eeca9c83065a261ba2854001a4c8c81fb4101a3573e44a5778d735f",
       "name": "17",
-      "versionCode": "6",
-      "versionName": "1.2-ready"
+      "versionCode": "7",
+      "versionName": "1.3-words"
     },
     {
-      "filename": "婷婷诊断_1.4.apk",
+      "filename": "婷婷诊断_1.5.apk",
       "bytes": 11150637,
-      "sha256": "302692ff704c7ca536f6c9ae4bd11e2149d0cf7936a276eb82fa6b2c519fddf6",
+      "sha256": "305ab389abbe3dcb9b08a7d14296a1202a050b607baef35df392bedb5532a5a6",
       "name": "17",
-      "versionCode": "5",
-      "versionName": "1.4-ready"
+      "versionCode": "6",
+      "versionName": "1.5-words"
     }
   ],
   "source_inventory": {
@@ -262,6 +262,149 @@
       "source": "verify_fix2.py",
       "source_sha256": "41c53d337514deedc4bbc8c1bfa20934be017acccf8b37887cc263a702e2eba6",
       "stored_sha256": "41c53d337514deedc4bbc8c1bfa20934be017acccf8b37887cc263a702e2eba6",
+      "transformations": []
+    },
+    "research/word-highlighting/build.ps1": {
+      "source": "word-highlighting/build.ps1",
+      "source_sha256": "7dad471ca3f4df0229db925f65457301632bb1a6eebe09eb0b2ceb832309196f",
+      "stored_sha256": "af34fcb2c0b8ac3f8f473e8f10e6af5c4932868bac8ef436be5ec869ae7423a8",
+      "transformations": [
+        "documented reverse reconstruction from later retained source",
+        "historical signing password literal replaced by environment-variable reference"
+      ]
+    },
+    "research/word-highlighting/diagnostic/AndroidManifest.xml": {
+      "source": "word-highlighting/diagnostic/AndroidManifest.xml",
+      "source_sha256": "ee1efea396daa91c75b9a56692ca032ef6fd78fa4d044aadaa066bc6f3bdf08e",
+      "stored_sha256": "a5ee7590cdbea0822733cce705f5e23cf94324b69eb12f1869c2c7ac14d0ed94",
+      "transformations": [
+        "documented reverse reconstruction from later retained source"
+      ]
+    },
+    "research/word-highlighting/diagnostic/res/values/strings.xml": {
+      "source": "word-highlighting/diagnostic/res/values/strings.xml",
+      "source_sha256": "c5ddcac562e91f6db451f3edb7be7e418f354299a46ffb6ee3c379fd4e884308",
+      "stored_sha256": "c5ddcac562e91f6db451f3edb7be7e418f354299a46ffb6ee3c379fd4e884308",
+      "transformations": []
+    },
+    "research/word-highlighting/diagnostic/res/xml/tts_engine.xml": {
+      "source": "word-highlighting/diagnostic/res/xml/tts_engine.xml",
+      "source_sha256": "7259107c802e4d597e014393645875fd3d6291e1f731022477e190ed597060f5",
+      "stored_sha256": "7259107c802e4d597e014393645875fd3d6291e1f731022477e190ed597060f5",
+      "transformations": []
+    },
+    "research/word-highlighting/package_apks.py": {
+      "source": "word-highlighting/package_apks.py",
+      "source_sha256": "bdb9798a31541282dbb5291ea09c53866065add3f62d535626b54e6ff279a172",
+      "stored_sha256": "bdb9798a31541282dbb5291ea09c53866065add3f62d535626b54e6ff279a172",
+      "transformations": []
+    },
+    "research/word-highlighting/patch_marks.py": {
+      "source": "word-highlighting/patch_marks.py",
+      "source_sha256": "c8ee2d85c5cb5a40a85c1c1c6d7c561008b03b06047651b237d4e95bfdd22f79",
+      "stored_sha256": "c8ee2d85c5cb5a40a85c1c1c6d7c561008b03b06047651b237d4e95bfdd22f79",
+      "transformations": []
+    },
+    "research/word-highlighting/production/AndroidManifest.xml": {
+      "source": "word-highlighting/production/AndroidManifest.xml",
+      "source_sha256": "f7f8f7e48008c3bec4cb8bb70dfe34a01987f3fca100201d77f49a07a7c2e832",
+      "stored_sha256": "9de4a617139915699d85a8e9429cacae2d84608c7a9774e84948a93f45f0a658",
+      "transformations": [
+        "documented reverse reconstruction from later retained source"
+      ]
+    },
+    "research/word-highlighting/production/res/xml/tts_engine.xml": {
+      "source": "word-highlighting/production/res/xml/tts_engine.xml",
+      "source_sha256": "7259107c802e4d597e014393645875fd3d6291e1f731022477e190ed597060f5",
+      "stored_sha256": "7259107c802e4d597e014393645875fd3d6291e1f731022477e190ed597060f5",
+      "transformations": []
+    },
+    "research/word-highlighting/src/com/android/appletts/compat/EngineSession.java": {
+      "source": "word-highlighting/src/com/android/appletts/compat/EngineSession.java",
+      "source_sha256": "5e470ca84fda74000a49e942eb9ead2e0af3ce150cd5af66542a9f79d3ac5b1a",
+      "stored_sha256": "5e470ca84fda74000a49e942eb9ead2e0af3ce150cd5af66542a9f79d3ac5b1a",
+      "transformations": []
+    },
+    "research/word-highlighting/src/com/android/appletts/compat/ProcessJournal.java": {
+      "source": "word-highlighting/src/com/android/appletts/compat/ProcessJournal.java",
+      "source_sha256": "cb8ffecee03e0f5cd579e57e8705f823f9908a429e35955d8dc0cbe6670e2c3e",
+      "stored_sha256": "cb8ffecee03e0f5cd579e57e8705f823f9908a429e35955d8dc0cbe6670e2c3e",
+      "transformations": []
+    },
+    "research/word-highlighting/src/com/android/appletts/compat/ReadyGate.java": {
+      "source": "word-highlighting/src/com/android/appletts/compat/ReadyGate.java",
+      "source_sha256": "0ac7ec3b313eae07c7f4cb15f3ae5f3ffbc64fc2ac0c197e8ee965dbcab4949d",
+      "stored_sha256": "0ac7ec3b313eae07c7f4cb15f3ae5f3ffbc64fc2ac0c197e8ee965dbcab4949d",
+      "transformations": []
+    },
+    "research/word-highlighting/src/com/android/appletts/compat/ReadyTtsService.java": {
+      "source": "word-highlighting/src/com/android/appletts/compat/ReadyTtsService.java",
+      "source_sha256": "e15185bcde155f24ad9a144b70ae2e0d8eac938c792d450d97a1fe9d429472d2",
+      "stored_sha256": "dc77cfcb3488dd3adc064fe9a8545d9efc4bd9baf11c1c82582e056e60a72e59",
+      "transformations": [
+        "documented reverse reconstruction from later retained source"
+      ]
+    },
+    "research/word-highlighting/src/com/android/appletts/compat/TraceLog.java": {
+      "source": "word-highlighting/src/com/android/appletts/compat/TraceLog.java",
+      "source_sha256": "24414f45da3c7f7e9f41bd16836ac6c999a889cd33549f1d9c79a6a4ac204d44",
+      "stored_sha256": "24414f45da3c7f7e9f41bd16836ac6c999a889cd33549f1d9c79a6a4ac204d44",
+      "transformations": []
+    },
+    "research/word-highlighting/src/com/android/appletts/compat/WordRanges.java": {
+      "source": "word-highlighting/src/com/android/appletts/compat/WordRanges.java",
+      "source_sha256": "0c071482cc97e9d27c63f37e423f38856a16d910f84aa4e95d90cc3132553e78",
+      "stored_sha256": "0c071482cc97e9d27c63f37e423f38856a16d910f84aa4e95d90cc3132553e78",
+      "transformations": []
+    },
+    "research/word-highlighting/src/local/tingting/diagnostic/DiagnosticActivity.java": {
+      "source": "word-highlighting/src/local/tingting/diagnostic/DiagnosticActivity.java",
+      "source_sha256": "4d394cd9a401cc9b14a0e594298b6a5d61323a61f2b36473540d7e6b908bccb8",
+      "stored_sha256": "6dfc8dad9cf7dff4d0a9782ef41f5af72fa3b3505b85540d30f26c4d6883f6be",
+      "transformations": [
+        "documented reverse reconstruction from later retained source"
+      ]
+    },
+    "research/word-highlighting/src/local/tingting/diagnostic/ExitTrace.java": {
+      "source": "word-highlighting/src/local/tingting/diagnostic/ExitTrace.java",
+      "source_sha256": "32c80bdc815116f105e9a55d1c82229f9f0cc13c0c321a9e49f042468d63621d",
+      "stored_sha256": "32c80bdc815116f105e9a55d1c82229f9f0cc13c0c321a9e49f042468d63621d",
+      "transformations": []
+    },
+    "research/word-highlighting/src/local/tingting/diagnostic/TtsProbe.java": {
+      "source": "word-highlighting/src/local/tingting/diagnostic/TtsProbe.java",
+      "source_sha256": "9e3ee16a0e6c08eabad543854eaec93e33342fbf9ffa3ace6b8e76f67cd2ba0c",
+      "stored_sha256": "9e3ee16a0e6c08eabad543854eaec93e33342fbf9ffa3ace6b8e76f67cd2ba0c",
+      "transformations": []
+    },
+    "research/word-highlighting/src/local/tingting/diagnostic/WavInfo.java": {
+      "source": "word-highlighting/src/local/tingting/diagnostic/WavInfo.java",
+      "source_sha256": "ffe4912366bc2e5d27cb214d1294c5e72d302b4e62cad7d4b40d2631fbc4e1e0",
+      "stored_sha256": "ffe4912366bc2e5d27cb214d1294c5e72d302b4e62cad7d4b40d2631fbc4e1e0",
+      "transformations": []
+    },
+    "research/word-highlighting/test/JournalCheck.java": {
+      "source": "word-highlighting/test/JournalCheck.java",
+      "source_sha256": "94274d6c025991e2653c5995a55eb5886065207a9676cb4ff1005b0ce230f277",
+      "stored_sha256": "94274d6c025991e2653c5995a55eb5886065207a9676cb4ff1005b0ce230f277",
+      "transformations": []
+    },
+    "research/word-highlighting/test/ReadinessCheck.java": {
+      "source": "word-highlighting/test/ReadinessCheck.java",
+      "source_sha256": "b71da6ba8e2d1cdcc69978558ff10a57a892f594a09d0894b8ba1e8585e26ad1",
+      "stored_sha256": "b71da6ba8e2d1cdcc69978558ff10a57a892f594a09d0894b8ba1e8585e26ad1",
+      "transformations": []
+    },
+    "research/word-highlighting/test/WordRangesCheck.java": {
+      "source": "word-highlighting/test/WordRangesCheck.java",
+      "source_sha256": "fb477a4d4958c44a9ba3fd691883a6139a16050c0f0a91a14f0b58dffaf62d48",
+      "stored_sha256": "fb477a4d4958c44a9ba3fd691883a6139a16050c0f0a91a14f0b58dffaf62d48",
+      "transformations": []
+    },
+    "research/word-highlighting/test_marks_patch.py": {
+      "source": "word-highlighting/test_marks_patch.py",
+      "source_sha256": "02dbeb4d4ee7e1f9d76a95f5bc8cdc8dff5cc902c1c0888d6f6f97f0040e44ef",
+      "stored_sha256": "02dbeb4d4ee7e1f9d76a95f5bc8cdc8dff5cc902c1c0888d6f6f97f0040e44ef",
       "transformations": []
     }
   }
