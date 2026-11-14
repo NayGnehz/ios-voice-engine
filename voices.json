@@ -1,0 +1,7 @@
+[
+  {"id":"tingting","name":"婷婷","sdk_name":"Ting-Ting","package":"com.android.apple64ttsx","header":"mnc/ve_mnc_ting-ting_compact.hdr","cfg":"cfg1"},
+  {"id":"lili","name":"莉莉","sdk_name":"Li-Li","package":"com.android.apple64ttsx.lili","header":"mnc/ve_mnc_li-li_22_compact.hdr","cfg":"cfg4"},
+  {"id":"limu","name":"李木","sdk_name":"Li-Mu","package":"com.android.apple64ttsx.limu","header":"mnc/ve_mnc_li-mu_compact.hdr","cfg":"cfg4"},
+  {"id":"tiantian","name":"甜甜","sdk_name":"Tian-Tian","package":"com.android.apple64ttsx.tiantian","header":"mnc/ve_MNC_Tian-Tian_Compact.hdr","cfg":"cfg4"},
+  {"id":"yushu","name":"舒宇","sdk_name":"Yu-Shu","package":"com.android.apple64ttsx.yushu","header":"mnc/ve_mnc_yu-shu_compact.hdr","cfg":"cfg4"}
+]
