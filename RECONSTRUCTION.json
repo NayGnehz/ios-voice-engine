@@ -1,26 +1,26 @@
 {
-  "sequence": 2,
-  "id": "fd-close-fix1",
-  "title": "单音色无图标与重复 close 修复",
+  "sequence": 3,
+  "id": "bet3-fix2",
+  "title": "修复二：匹配定点 BET3 模块",
   "status": "retained-source",
   "reconstructed_on": "2026-11-14",
-  "note": "现存修复一脚本将单音色、无图标和重复关闭修复组合在一起；更早未单独留存的代码不拆成猜测快照。签名密码参数已脱敏。",
+  "note": "修正音色头中的 select/synth 组件声明，语音模型本身不变。未重新执行旧构建。",
   "artifacts": [
     {
-      "filename": "ios-tingting-arm64-fix1.apk",
+      "filename": "ios-tingting-arm64-fix2.apk",
       "bytes": 15689807,
-      "sha256": "2e989aa8963a67fdfa5ab34e01381e0d30416465eb94c9887e64755a32f65014",
+      "sha256": "3531157e19f971d0f018abe4ab5018ef3ed5bfda54d67b787e757737d669e11f",
       "name": "12",
-      "versionCode": "3",
+      "versionCode": "4",
       "versionName": "1.0"
     },
     {
-      "filename": "tingting-diagnostic-fix1.apk",
+      "filename": "tingting-diagnostic-fix2.apk",
       "bytes": 15652081,
-      "sha256": "332db6211ab7e90b0f8175fb669222b4d11468fcbaf7c48bf61a87aec9e99f81",
+      "sha256": "1922c22a3581e06a313a8de1c39a58cb07c32e4a3c33d62cfa35994a70fd5748",
       "name": "17",
-      "versionCode": "2",
-      "versionName": "1.1-fd-fix"
+      "versionCode": "3",
+      "versionName": "1.2-bet3fxd"
     }
   ],
   "source_inventory": {
@@ -38,10 +38,54 @@
         "historical signing password literal replaced by environment-variable reference"
       ]
     },
+    "research/build_fix2.ps1": {
+      "source": "build_fix2.ps1",
+      "source_sha256": "51a93081d16fbe017bb0bcecf381f35c9cf32507d8f6830f69599c4b8f495f05",
+      "stored_sha256": "2a361746941a47962f47de702539ec4e698f561103d63a4f53c584a6bc9fe8f0",
+      "transformations": [
+        "historical signing password literal replaced by environment-variable reference"
+      ]
+    },
+    "research/build_fix2.py": {
+      "source": "build_fix2.py",
+      "source_sha256": "b37d777c225917ddfa913c5f4f020ee1054e6642a620c4e1a5c265527086a808",
+      "stored_sha256": "b37d777c225917ddfa913c5f4f020ee1054e6642a620c4e1a5c265527086a808",
+      "transformations": []
+    },
     "research/build_trial.py": {
       "source": "build_trial.py",
       "source_sha256": "5e48c9d8a69cc3a1f424454bb4187459c553a400064c957023e1db957cae798d",
       "stored_sha256": "5e48c9d8a69cc3a1f424454bb4187459c553a400064c957023e1db957cae798d",
+      "transformations": []
+    },
+    "research/diagnostic-fix2/AndroidManifest.xml": {
+      "source": "diagnostic-fix2/AndroidManifest.xml",
+      "source_sha256": "db6784098525ccac2829dc1dc4a963cda5ef1c828451437e108420e17211cbb3",
+      "stored_sha256": "db6784098525ccac2829dc1dc4a963cda5ef1c828451437e108420e17211cbb3",
+      "transformations": []
+    },
+    "research/diagnostic-fix2/DiagnosticActivity.java": {
+      "source": "diagnostic-fix2/DiagnosticActivity.java",
+      "source_sha256": "50ad356a153ee2669dc12d87099e9d26d7936a397ba3756bf3534030b0fb0294",
+      "stored_sha256": "50ad356a153ee2669dc12d87099e9d26d7936a397ba3756bf3534030b0fb0294",
+      "transformations": []
+    },
+    "research/diagnostic-fix2/ExitTrace.java": {
+      "source": "diagnostic-fix2/ExitTrace.java",
+      "source_sha256": "32c80bdc815116f105e9a55d1c82229f9f0cc13c0c321a9e49f042468d63621d",
+      "stored_sha256": "32c80bdc815116f105e9a55d1c82229f9f0cc13c0c321a9e49f042468d63621d",
+      "transformations": []
+    },
+    "research/diagnostic-fix2/package_probe.py": {
+      "source": "diagnostic-fix2/package_probe.py",
+      "source_sha256": "62a547a01b808641a6d34cfbf256e134daeb49c08b67cb4d8bec064442ac798f",
+      "stored_sha256": "62a547a01b808641a6d34cfbf256e134daeb49c08b67cb4d8bec064442ac798f",
+      "transformations": []
+    },
+    "research/diagnostic-fix2/res/values/strings.xml": {
+      "source": "diagnostic-fix2/res/values/strings.xml",
+      "source_sha256": "c5ddcac562e91f6db451f3edb7be7e418f354299a46ffb6ee3c379fd4e884308",
+      "stored_sha256": "c5ddcac562e91f6db451f3edb7be7e418f354299a46ffb6ee3c379fd4e884308",
       "transformations": []
     },
     "research/diagnostic/AndroidManifest.xml": {
@@ -74,6 +118,12 @@
       "stored_sha256": "c5ddcac562e91f6db451f3edb7be7e418f354299a46ffb6ee3c379fd4e884308",
       "transformations": []
     },
+    "research/elf_view.py": {
+      "source": "elf_view.py",
+      "source_sha256": "6cbeb246e602c78bf2f48e4bbfc5de508483de8c8b3e9ceb9dc33b55961cd5d6",
+      "stored_sha256": "6cbeb246e602c78bf2f48e4bbfc5de508483de8c8b3e9ceb9dc33b55961cd5d6",
+      "transformations": []
+    },
     "research/patch_fd_close.py": {
       "source": "patch_fd_close.py",
       "source_sha256": "777662048fb8df5233fbc90800a2376d89007296b316aeb1860e65c900c4cb1c",
@@ -84,6 +134,12 @@
       "source": "verify_fix1.py",
       "source_sha256": "ea47c4769ce5ae2203b88fa0674cc44f8f971b9a3b3c1ce44286396252dca9e2",
       "stored_sha256": "ea47c4769ce5ae2203b88fa0674cc44f8f971b9a3b3c1ce44286396252dca9e2",
+      "transformations": []
+    },
+    "research/verify_fix2.py": {
+      "source": "verify_fix2.py",
+      "source_sha256": "41c53d337514deedc4bbc8c1bfa20934be017acccf8b37887cc263a702e2eba6",
+      "stored_sha256": "41c53d337514deedc4bbc8c1bfa20934be017acccf8b37887cc263a702e2eba6",
       "transformations": []
     }
   }

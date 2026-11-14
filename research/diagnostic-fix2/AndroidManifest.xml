@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="local.tingting.diagnostic" android:versionCode="3" android:versionName="1.2-bet3fxd">
+  <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="32" />
+  <application android:label="@string/app_name" android:allowBackup="false" android:theme="@android:style/Theme.Material.Light.NoActionBar">
+    <activity android:name=".DiagnosticActivity" android:exported="true">
+      <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
+    </activity>
+  </application>
+</manifest>
