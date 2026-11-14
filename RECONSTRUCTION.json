@@ -1,18 +1,26 @@
 {
-  "sequence": 4,
-  "id": "compressed",
-  "title": "压缩安装包且保留资源 FD 访问",
-  "status": "retained-source",
+  "sequence": 5,
+  "id": "ready-initial",
+  "title": "启动就绪修复 1.1 / 诊断 1.3",
+  "status": "artifact-metadata-only",
   "reconstructed_on": "2026-11-14",
-  "note": "原生库 ZIP 压缩；XMF 保持可直接读取的存储方式。版本号与修复二相同，以序号区分。",
+  "note": "APK 留存，但这一轮的完整 Java 源码已被下一版覆盖；此提交只记录版本和校验和，不拿后来的代码冒充原件。",
   "artifacts": [
     {
-      "filename": "iOS-婷婷_64位.apk",
-      "bytes": 11159609,
-      "sha256": "43b9fbf7c36d0628f4a78577817ec289d3e6d5dd126a2835954db44337f73f1e",
-      "name": "12",
+      "filename": "iOS-婷婷_启动修复版.apk",
+      "bytes": 11130157,
+      "sha256": "b922505cf8fd6487578296dcdbf47198f15958ca36d1c4635ca5e9ced8595804",
+      "name": "17",
+      "versionCode": "5",
+      "versionName": "1.1-ready"
+    },
+    {
+      "filename": "婷婷诊断_1.3.apk",
+      "bytes": 11146541,
+      "sha256": "2d40fdbd5043651e3acc7bada591b9b6496f3117c1b73ce4f885225d38849b2d",
+      "name": "17",
       "versionCode": "4",
-      "versionName": "1.0"
+      "versionName": "1.3-ready"
     }
   ],
   "source_inventory": {
