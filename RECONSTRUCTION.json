@@ -1,26 +1,26 @@
 {
-  "sequence": 7,
-  "id": "word-highlighting",
-  "title": "逐词位置回调 1.3 / 诊断 1.5",
-  "status": "documented-reconstruction",
+  "sequence": 8,
+  "id": "rate-fix",
+  "title": "连续倍速 1.4 / 诊断 1.6",
+  "status": "retained-source",
   "reconstructed_on": "2026-11-14",
-  "note": "词回调代码保留；倍速调用、版本标签、诊断说明和打包文件名按已记录的后续变更逆向还原。不是完整原始文件逐字备份，不声称重现同一个签名 APK；旧版 verify.py 未单独恢复。",
+  "note": "恢复为实际留存的倍速修复源码，包含 50～400 夹限和 0.02 步进映射回归。签名密码参数已脱敏。",
   "artifacts": [
     {
-      "filename": "iOS-婷婷_逐词高亮版.apk",
+      "filename": "iOS-婷婷_倍速修复版_v1.4.apk",
       "bytes": 11134253,
-      "sha256": "0545c82a0eeca9c83065a261ba2854001a4c8c81fb4101a3573e44a5778d735f",
+      "sha256": "64f603df2db34d708217b5cc4b02ad5275911eed6c8b0e353cc8f7f7292a05b4",
       "name": "17",
-      "versionCode": "7",
-      "versionName": "1.3-words"
+      "versionCode": "8",
+      "versionName": "1.4-rate"
     },
     {
-      "filename": "婷婷诊断_1.5.apk",
+      "filename": "婷婷诊断_1.6.apk",
       "bytes": 11150637,
-      "sha256": "305ab389abbe3dcb9b08a7d14296a1202a050b607baef35df392bedb5532a5a6",
+      "sha256": "55492b779ae60ae41ce2ef6f673e2f214c1fe464c49eb026ae2f14909782a5b5",
       "name": "17",
-      "versionCode": "6",
-      "versionName": "1.5-words"
+      "versionCode": "7",
+      "versionName": "1.6-rate"
     }
   ],
   "source_inventory": {
@@ -267,19 +267,16 @@
     "research/word-highlighting/build.ps1": {
       "source": "word-highlighting/build.ps1",
       "source_sha256": "7dad471ca3f4df0229db925f65457301632bb1a6eebe09eb0b2ceb832309196f",
-      "stored_sha256": "af34fcb2c0b8ac3f8f473e8f10e6af5c4932868bac8ef436be5ec869ae7423a8",
+      "stored_sha256": "c3ff88b2aea18d69261d159d2c13743590161b0d3b98a6f33a861575bad7e0ae",
       "transformations": [
-        "documented reverse reconstruction from later retained source",
         "historical signing password literal replaced by environment-variable reference"
       ]
     },
     "research/word-highlighting/diagnostic/AndroidManifest.xml": {
       "source": "word-highlighting/diagnostic/AndroidManifest.xml",
       "source_sha256": "ee1efea396daa91c75b9a56692ca032ef6fd78fa4d044aadaa066bc6f3bdf08e",
-      "stored_sha256": "a5ee7590cdbea0822733cce705f5e23cf94324b69eb12f1869c2c7ac14d0ed94",
-      "transformations": [
-        "documented reverse reconstruction from later retained source"
-      ]
+      "stored_sha256": "ee1efea396daa91c75b9a56692ca032ef6fd78fa4d044aadaa066bc6f3bdf08e",
+      "transformations": []
     },
     "research/word-highlighting/diagnostic/res/values/strings.xml": {
       "source": "word-highlighting/diagnostic/res/values/strings.xml",
@@ -308,10 +305,8 @@
     "research/word-highlighting/production/AndroidManifest.xml": {
       "source": "word-highlighting/production/AndroidManifest.xml",
       "source_sha256": "f7f8f7e48008c3bec4cb8bb70dfe34a01987f3fca100201d77f49a07a7c2e832",
-      "stored_sha256": "9de4a617139915699d85a8e9429cacae2d84608c7a9774e84948a93f45f0a658",
-      "transformations": [
-        "documented reverse reconstruction from later retained source"
-      ]
+      "stored_sha256": "f7f8f7e48008c3bec4cb8bb70dfe34a01987f3fca100201d77f49a07a7c2e832",
+      "transformations": []
     },
     "research/word-highlighting/production/res/xml/tts_engine.xml": {
       "source": "word-highlighting/production/res/xml/tts_engine.xml",
@@ -340,10 +335,14 @@
     "research/word-highlighting/src/com/android/appletts/compat/ReadyTtsService.java": {
       "source": "word-highlighting/src/com/android/appletts/compat/ReadyTtsService.java",
       "source_sha256": "e15185bcde155f24ad9a144b70ae2e0d8eac938c792d450d97a1fe9d429472d2",
-      "stored_sha256": "dc77cfcb3488dd3adc064fe9a8545d9efc4bd9baf11c1c82582e056e60a72e59",
-      "transformations": [
-        "documented reverse reconstruction from later retained source"
-      ]
+      "stored_sha256": "e15185bcde155f24ad9a144b70ae2e0d8eac938c792d450d97a1fe9d429472d2",
+      "transformations": []
+    },
+    "research/word-highlighting/src/com/android/appletts/compat/SpeechRate.java": {
+      "source": "word-highlighting/src/com/android/appletts/compat/SpeechRate.java",
+      "source_sha256": "7c7fb2c505b6c2828444ac08bb28e7a5ae3ee7a9180a868452faee4ea33fabce",
+      "stored_sha256": "7c7fb2c505b6c2828444ac08bb28e7a5ae3ee7a9180a868452faee4ea33fabce",
+      "transformations": []
     },
     "research/word-highlighting/src/com/android/appletts/compat/TraceLog.java": {
       "source": "word-highlighting/src/com/android/appletts/compat/TraceLog.java",
@@ -360,10 +359,8 @@
     "research/word-highlighting/src/local/tingting/diagnostic/DiagnosticActivity.java": {
       "source": "word-highlighting/src/local/tingting/diagnostic/DiagnosticActivity.java",
       "source_sha256": "4d394cd9a401cc9b14a0e594298b6a5d61323a61f2b36473540d7e6b908bccb8",
-      "stored_sha256": "6dfc8dad9cf7dff4d0a9782ef41f5af72fa3b3505b85540d30f26c4d6883f6be",
-      "transformations": [
-        "documented reverse reconstruction from later retained source"
-      ]
+      "stored_sha256": "4d394cd9a401cc9b14a0e594298b6a5d61323a61f2b36473540d7e6b908bccb8",
+      "transformations": []
     },
     "research/word-highlighting/src/local/tingting/diagnostic/ExitTrace.java": {
       "source": "word-highlighting/src/local/tingting/diagnostic/ExitTrace.java",
@@ -395,6 +392,12 @@
       "stored_sha256": "b71da6ba8e2d1cdcc69978558ff10a57a892f594a09d0894b8ba1e8585e26ad1",
       "transformations": []
     },
+    "research/word-highlighting/test/SpeechRateCheck.java": {
+      "source": "word-highlighting/test/SpeechRateCheck.java",
+      "source_sha256": "aa53e9a6a9a8d8395025be0cfe6732c5daabd909188db5bc739d44b6f10a574b",
+      "stored_sha256": "aa53e9a6a9a8d8395025be0cfe6732c5daabd909188db5bc739d44b6f10a574b",
+      "transformations": []
+    },
     "research/word-highlighting/test/WordRangesCheck.java": {
       "source": "word-highlighting/test/WordRangesCheck.java",
       "source_sha256": "fb477a4d4958c44a9ba3fd691883a6139a16050c0f0a91a14f0b58dffaf62d48",
@@ -405,6 +408,12 @@
       "source": "word-highlighting/test_marks_patch.py",
       "source_sha256": "02dbeb4d4ee7e1f9d76a95f5bc8cdc8dff5cc902c1c0888d6f6f97f0040e44ef",
       "stored_sha256": "02dbeb4d4ee7e1f9d76a95f5bc8cdc8dff5cc902c1c0888d6f6f97f0040e44ef",
+      "transformations": []
+    },
+    "research/word-highlighting/verify.py": {
+      "source": "word-highlighting/verify.py",
+      "source_sha256": "1eb24ac6532ae7ad5f6fc8463af3387810ff125fafefaef64a82fbfa21e174a0",
+      "stored_sha256": "1eb24ac6532ae7ad5f6fc8463af3387810ff125fafefaef64a82fbfa21e174a0",
       "transformations": []
     }
   }

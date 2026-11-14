@@ -41,7 +41,7 @@ public final class DiagnosticActivity extends Activity {
         LinearLayout layout = new LinearLayout(this); layout.setOrientation(1); layout.setPadding(24, 24, 24, 24);
         setContentView(layout);
         TextView intro = new TextView(this);
-        intro.setText("启动与覆盖安装诊断 1.5（词边界）\n保留现有 iOS-婷婷，点击“开始诊断”。完成后复制结果。不会更改默认语音引擎。\n“延迟启动对照”是人为延迟两秒的模拟测试，会明确标记。");
+        intro.setText("启动与覆盖安装诊断 1.6（倍速修复、词边界）\n保留现有 iOS-婷婷，点击“开始诊断”。完成后复制结果。不会更改默认语音引擎。\n“延迟启动对照”是人为延迟两秒的模拟测试，会明确标记。");
         layout.addView(intro);
         preview = new TextView(this); preview.setText(TtsProbe.TEXT); preview.setTextSize(20); layout.addView(preview);
         start = new Button(this); start.setText("开始诊断"); layout.addView(start);
@@ -66,7 +66,7 @@ public final class DiagnosticActivity extends Activity {
         catch (Exception e) { output.setText("无法创建诊断日志：" + e); return; }
         new Thread(() -> {
             try {
-                log("诊断版=1.5-words；本次模式=" + (simulated ? "人为延迟2秒对照，不能作为自然故障证据" : "自然启动，无人工延迟"));
+                log("诊断版=1.6-rate；本次模式=" + (simulated ? "人为延迟2秒对照，不能作为自然故障证据" : "自然启动，无人工延迟"));
                 log("手机=" + Build.MANUFACTURER + " " + Build.MODEL + " Android=" + Build.VERSION.RELEASE
                     + " API=" + Build.VERSION.SDK_INT + " ABIs=" + Arrays.toString(Build.SUPPORTED_ABIS)
                     + " 64位=" + android.os.Process.is64Bit());

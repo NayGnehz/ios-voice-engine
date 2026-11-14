@@ -87,8 +87,7 @@ public final class ReadyTtsService extends TextToSpeechService {
             }
             int maxBytes = callback.getMaxBufferSize() & ~1;
             if (maxBytes < 2) throw new IllegalStateException("invalid callback buffer size");
-            int rate = request.getSpeechRate();
-            if (rate > 100) rate = rate / 2 + 100;  // Retain the original wrapper's rate curve.
+            int rate = SpeechRate.toNative(request.getSpeechRate());
             int pitch = request.getPitch();
             if (pitch > 80) pitch = 80 + pitch * 90 / 400;
             final long[] bytes = {0};

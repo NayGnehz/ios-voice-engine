@@ -29,11 +29,12 @@ foreach ($variant in @('diagnostic', 'production')) {
 Run $pythonExe @((Join-Path $readyRoot 'package_apks.py'))
 foreach ($variant in @('diagnostic', 'production')) {
     $variantRoot = Join-Path $readyRoot $variant
-    $filename = if ($variant -eq 'production') { 'iOS-婷婷_逐词高亮版.apk' } else { '婷婷诊断_1.5.apk' }
+    $filename = if ($variant -eq 'production') { 'iOS-婷婷_倍速修复版_v1.4.apk' } else { '婷婷诊断_1.6.apk' }
     $output = Join-Path $outputRoot $filename
     Run (Join-Path $buildTools 'zipalign.exe') @('-P', '16', '-f', '4', (Join-Path $variantRoot 'unsigned.apk'), (Join-Path $variantRoot 'aligned.apk'))
     Run (Join-Path $jdkBin 'java.exe') @('-jar', (Join-Path $buildTools 'lib\apksigner.jar'), 'sign', '--ks', (Join-Path $researchRoot 'trial-signing.p12'), '--ks-pass', 'env:VOICE_STORE_PASSWORD', '--ks-key-alias', 'trial', '--out', $output, (Join-Path $variantRoot 'aligned.apk'))
     Run (Join-Path $jdkBin 'java.exe') @('-jar', (Join-Path $buildTools 'lib\apksigner.jar'), 'verify', '--verbose', '--print-certs', $output)
     Run (Join-Path $buildTools 'zipalign.exe') @('-c', '-P', '16', '4', $output)
+    Copy-Item -LiteralPath $output -Destination (Join-Path $variantRoot 'final.apk') -Force
     Get-Item -LiteralPath $output | Select-Object Name, Length
 }
