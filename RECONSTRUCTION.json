@@ -1,26 +1,26 @@
 {
-  "sequence": 5,
-  "id": "ready-initial",
-  "title": "启动就绪修复 1.1 / 诊断 1.3",
-  "status": "artifact-metadata-only",
+  "sequence": 6,
+  "id": "ready-v2",
+  "title": "启动就绪 1.2 / 诊断 1.4",
+  "status": "retained-source",
   "reconstructed_on": "2026-11-14",
-  "note": "APK 留存，但这一轮的完整 Java 源码已被下一版覆盖；此提交只记录版本和校验和，不拿后来的代码冒充原件。",
+  "note": "保留的 readiness 源码含就绪等待和进程独立日志；不导入用户诊断日志、设备身份或运行采样。",
   "artifacts": [
     {
-      "filename": "iOS-婷婷_启动修复版.apk",
-      "bytes": 11130157,
-      "sha256": "b922505cf8fd6487578296dcdbf47198f15958ca36d1c4635ca5e9ced8595804",
+      "filename": "iOS-婷婷_启动修复版_v2.apk",
+      "bytes": 11134253,
+      "sha256": "e926b663435d28a59fb0277788dc02eb3521e1f0184c3e13da9ea83e036936d8",
       "name": "17",
-      "versionCode": "5",
-      "versionName": "1.1-ready"
+      "versionCode": "6",
+      "versionName": "1.2-ready"
     },
     {
-      "filename": "婷婷诊断_1.3.apk",
-      "bytes": 11146541,
-      "sha256": "2d40fdbd5043651e3acc7bada591b9b6496f3117c1b73ce4f885225d38849b2d",
+      "filename": "婷婷诊断_1.4.apk",
+      "bytes": 11150637,
+      "sha256": "302692ff704c7ca536f6c9ae4bd11e2149d0cf7936a276eb82fa6b2c519fddf6",
       "name": "17",
-      "versionCode": "4",
-      "versionName": "1.3-ready"
+      "versionCode": "5",
+      "versionName": "1.4-ready"
     }
   ],
   "source_inventory": {
@@ -134,6 +134,122 @@
       "source": "patch_fd_close.py",
       "source_sha256": "777662048fb8df5233fbc90800a2376d89007296b316aeb1860e65c900c4cb1c",
       "stored_sha256": "777662048fb8df5233fbc90800a2376d89007296b316aeb1860e65c900c4cb1c",
+      "transformations": []
+    },
+    "research/readiness/build.ps1": {
+      "source": "readiness/build.ps1",
+      "source_sha256": "8c9ac670c1038bd66e4d9512fa0589f75209ab335849053ee58a89951acb91bc",
+      "stored_sha256": "4e14f5bc430ce063d9661bccf21107297a2c3615310007fd45b22cb8099dc6c4",
+      "transformations": [
+        "historical signing password literal replaced by environment-variable reference"
+      ]
+    },
+    "research/readiness/diagnostic/AndroidManifest.xml": {
+      "source": "readiness/diagnostic/AndroidManifest.xml",
+      "source_sha256": "14ae354704abaf6779c660930c4466bcac74a517ec03d2e053892a78b00854f0",
+      "stored_sha256": "14ae354704abaf6779c660930c4466bcac74a517ec03d2e053892a78b00854f0",
+      "transformations": []
+    },
+    "research/readiness/diagnostic/res/values/strings.xml": {
+      "source": "readiness/diagnostic/res/values/strings.xml",
+      "source_sha256": "c5ddcac562e91f6db451f3edb7be7e418f354299a46ffb6ee3c379fd4e884308",
+      "stored_sha256": "c5ddcac562e91f6db451f3edb7be7e418f354299a46ffb6ee3c379fd4e884308",
+      "transformations": []
+    },
+    "research/readiness/diagnostic/res/xml/tts_engine.xml": {
+      "source": "readiness/diagnostic/res/xml/tts_engine.xml",
+      "source_sha256": "7259107c802e4d597e014393645875fd3d6291e1f731022477e190ed597060f5",
+      "stored_sha256": "7259107c802e4d597e014393645875fd3d6291e1f731022477e190ed597060f5",
+      "transformations": []
+    },
+    "research/readiness/package_apks.py": {
+      "source": "readiness/package_apks.py",
+      "source_sha256": "22efd17ac78b18c94e459c56368750c4f69ada5daf573216fea2681f8ecd8315",
+      "stored_sha256": "22efd17ac78b18c94e459c56368750c4f69ada5daf573216fea2681f8ecd8315",
+      "transformations": []
+    },
+    "research/readiness/production/AndroidManifest.xml": {
+      "source": "readiness/production/AndroidManifest.xml",
+      "source_sha256": "abf32df83bb2763a21c42c02745045e0de28bfc7dc62ca1b28ae844cfdef41fb",
+      "stored_sha256": "abf32df83bb2763a21c42c02745045e0de28bfc7dc62ca1b28ae844cfdef41fb",
+      "transformations": []
+    },
+    "research/readiness/production/res/xml/tts_engine.xml": {
+      "source": "readiness/production/res/xml/tts_engine.xml",
+      "source_sha256": "7259107c802e4d597e014393645875fd3d6291e1f731022477e190ed597060f5",
+      "stored_sha256": "7259107c802e4d597e014393645875fd3d6291e1f731022477e190ed597060f5",
+      "transformations": []
+    },
+    "research/readiness/src/com/android/appletts/compat/EngineSession.java": {
+      "source": "readiness/src/com/android/appletts/compat/EngineSession.java",
+      "source_sha256": "859a24325b08b8d115dc511a9b9e694dfae8921b195cceb061052deb3283cf41",
+      "stored_sha256": "859a24325b08b8d115dc511a9b9e694dfae8921b195cceb061052deb3283cf41",
+      "transformations": []
+    },
+    "research/readiness/src/com/android/appletts/compat/ProcessJournal.java": {
+      "source": "readiness/src/com/android/appletts/compat/ProcessJournal.java",
+      "source_sha256": "cb8ffecee03e0f5cd579e57e8705f823f9908a429e35955d8dc0cbe6670e2c3e",
+      "stored_sha256": "cb8ffecee03e0f5cd579e57e8705f823f9908a429e35955d8dc0cbe6670e2c3e",
+      "transformations": []
+    },
+    "research/readiness/src/com/android/appletts/compat/ReadyGate.java": {
+      "source": "readiness/src/com/android/appletts/compat/ReadyGate.java",
+      "source_sha256": "0ac7ec3b313eae07c7f4cb15f3ae5f3ffbc64fc2ac0c197e8ee965dbcab4949d",
+      "stored_sha256": "0ac7ec3b313eae07c7f4cb15f3ae5f3ffbc64fc2ac0c197e8ee965dbcab4949d",
+      "transformations": []
+    },
+    "research/readiness/src/com/android/appletts/compat/ReadyTtsService.java": {
+      "source": "readiness/src/com/android/appletts/compat/ReadyTtsService.java",
+      "source_sha256": "c146a34e61665fd89dc2a6132778274e1c7cdb73c07a2a0b63703ec720c1002c",
+      "stored_sha256": "c146a34e61665fd89dc2a6132778274e1c7cdb73c07a2a0b63703ec720c1002c",
+      "transformations": []
+    },
+    "research/readiness/src/com/android/appletts/compat/TraceLog.java": {
+      "source": "readiness/src/com/android/appletts/compat/TraceLog.java",
+      "source_sha256": "24414f45da3c7f7e9f41bd16836ac6c999a889cd33549f1d9c79a6a4ac204d44",
+      "stored_sha256": "24414f45da3c7f7e9f41bd16836ac6c999a889cd33549f1d9c79a6a4ac204d44",
+      "transformations": []
+    },
+    "research/readiness/src/local/tingting/diagnostic/DiagnosticActivity.java": {
+      "source": "readiness/src/local/tingting/diagnostic/DiagnosticActivity.java",
+      "source_sha256": "68cd27421dc2e74465ed8a07bfe1533eb72cd0c3e5e65a2054ed674143d036ab",
+      "stored_sha256": "68cd27421dc2e74465ed8a07bfe1533eb72cd0c3e5e65a2054ed674143d036ab",
+      "transformations": []
+    },
+    "research/readiness/src/local/tingting/diagnostic/ExitTrace.java": {
+      "source": "readiness/src/local/tingting/diagnostic/ExitTrace.java",
+      "source_sha256": "32c80bdc815116f105e9a55d1c82229f9f0cc13c0c321a9e49f042468d63621d",
+      "stored_sha256": "32c80bdc815116f105e9a55d1c82229f9f0cc13c0c321a9e49f042468d63621d",
+      "transformations": []
+    },
+    "research/readiness/src/local/tingting/diagnostic/TtsProbe.java": {
+      "source": "readiness/src/local/tingting/diagnostic/TtsProbe.java",
+      "source_sha256": "6b05e2ea45bb0008aab1e2951c64b7aa36693f9c88838b7422d0f7d10d8bbab2",
+      "stored_sha256": "6b05e2ea45bb0008aab1e2951c64b7aa36693f9c88838b7422d0f7d10d8bbab2",
+      "transformations": []
+    },
+    "research/readiness/src/local/tingting/diagnostic/WavInfo.java": {
+      "source": "readiness/src/local/tingting/diagnostic/WavInfo.java",
+      "source_sha256": "ffe4912366bc2e5d27cb214d1294c5e72d302b4e62cad7d4b40d2631fbc4e1e0",
+      "stored_sha256": "ffe4912366bc2e5d27cb214d1294c5e72d302b4e62cad7d4b40d2631fbc4e1e0",
+      "transformations": []
+    },
+    "research/readiness/test/JournalCheck.java": {
+      "source": "readiness/test/JournalCheck.java",
+      "source_sha256": "94274d6c025991e2653c5995a55eb5886065207a9676cb4ff1005b0ce230f277",
+      "stored_sha256": "94274d6c025991e2653c5995a55eb5886065207a9676cb4ff1005b0ce230f277",
+      "transformations": []
+    },
+    "research/readiness/test/ReadinessCheck.java": {
+      "source": "readiness/test/ReadinessCheck.java",
+      "source_sha256": "b71da6ba8e2d1cdcc69978558ff10a57a892f594a09d0894b8ba1e8585e26ad1",
+      "stored_sha256": "b71da6ba8e2d1cdcc69978558ff10a57a892f594a09d0894b8ba1e8585e26ad1",
+      "transformations": []
+    },
+    "research/readiness/verify.py": {
+      "source": "readiness/verify.py",
+      "source_sha256": "ea19680c39f3fc54501fcbbd9758de089d02efbdf7b673a3692078aa0e3e73b0",
+      "stored_sha256": "ea19680c39f3fc54501fcbbd9758de089d02efbdf7b673a3692078aa0e3e73b0",
       "transformations": []
     },
     "research/verify_fix1.py": {
