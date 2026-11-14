@@ -1,0 +1,19 @@
+{
+  "sequence": 0,
+  "id": "community-baseline",
+  "title": "社区原包基线记录",
+  "status": "artifact-metadata-only",
+  "reconstructed_on": "2026-11-14",
+  "note": "原社区封装没有可验证的开放源码；这里只记录实际输入 APK 身份，不伪造原项目源码。",
+  "artifacts": [
+    {
+      "filename": "苹果中文语音库_clone.apk",
+      "bytes": 27990856,
+      "sha256": "3768e8f7f1c7cefc169cc5fbb5354dbd8a7cd8efdddfe4b45f8486e4d767946f",
+      "name": "12",
+      "versionCode": "1",
+      "versionName": "1.0"
+    }
+  ],
+  "source_inventory": {}
+}
